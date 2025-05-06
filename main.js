@@ -40,15 +40,12 @@ function resetGame() {
 }
 
 function showAllTargets() {
+    score++;
     targets.forEach(target => {
         target.classList.remove('hidden');
         moveTarget(target);
     });
     scoreBoard.textContent = `Score: ${score}`;
-    setTimeout(() => {
-        scoreBoard.textContent = `Score: 0`;
-        score = 0;
-    }, 2000);
 }
 
 function setupTargets(count) {
@@ -69,7 +66,6 @@ function setupTargets(count) {
                 const targetNumber = parseInt(this.dataset.number);
                 
                 if (targetNumber === currentTargetNumber) {
-                    score++;
                     targetsClicked++;
                     currentTargetNumber++;
                     this.classList.add('hidden');
