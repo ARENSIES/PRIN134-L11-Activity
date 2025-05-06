@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="controlPanel">
+        <label for="targetCount">Number of Targets:</label>
+        <input type="number" id="targetCount" min="1" max="20" value="1">
+        <button id="applyBtn">Apply</button>
+    </div>
     <div id="gameArea">
-        <div id="target"></div>
     </div>
     <div id="scoreBoard">Score: 0</div>
     <script src="main.js"></script>
